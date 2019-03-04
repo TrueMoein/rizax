@@ -1,0 +1,26 @@
+{
+  "name": "rizax",
+  "version": "1.0.0",
+  "description": "compress images fast and secure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrueMoein/rizax.git"
+  },
+  "keywords": [
+    "compress-images"
+  ],
+  "author": "Moein Alizadeh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrueMoein/rizax/issues"
+  },
+  "homepage": "https://github.com/TrueMoein/rizax#readme",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  }
+}
