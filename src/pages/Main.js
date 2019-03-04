@@ -3,8 +3,16 @@ import React, { useEffect, useState } from 'react';
 export default function Main() {
   const [image, setImage] = useState(null);
 
+  useEffect(() => {
+    if (image) console.dir(image);
+  }, [image]);
+
   const handleImageChange = ({ target }) => {
-    setImage(URL.createObjectURL(target.files[0]));
+    const img = URL.createObjectURL(target.files[0]);
+    setImage(img);
+    document.querySelector(
+      '.background-image'
+    ).style.background = `url(${img}) no-repeat center center`;
   };
 
   return (
@@ -13,13 +21,19 @@ export default function Main() {
         <label htmlFor="image">
           Select image
           <input
+            accept="image/jpeg"
             onChange={handleImageChange}
             type="file"
             name="image"
             id="image"
           />
         </label>
-        {image && <img src={image} alt="my ax" />}
+        {image && (
+          <div
+            className="fill"
+            style={{ background: `url(${image}) no-repeat center center` }}
+          />
+        )}
       </form>
     </div>
   );

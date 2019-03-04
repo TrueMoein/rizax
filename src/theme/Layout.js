@@ -5,9 +5,13 @@ import Footer from './Footer';
 export default function About({ children }) {
   return (
     <Fragment>
-      <Header />
-      <main>{children}</main>
-      <Footer />
+      <div className="background-image" />
+
+      <main>
+        <Header />
+        {children}
+        <Footer />
+      </main>
     </Fragment>
   );
 }
