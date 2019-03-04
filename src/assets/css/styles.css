@@ -1,0 +1,23 @@
+input[name="image"] {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border: solid 1px gray;
+}
+
+label[for="image"] {
+  background-color: green;
+  color: white;
+}
