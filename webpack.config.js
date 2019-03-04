@@ -10,7 +10,9 @@ module.exports = {
     path: path.resolve(__dirname, 'build')
   },
   devServer: {
-    contentBase: './build'
+    contentBase: './build',
+    historyApiFallback: true,
+    hot: true
   },
   module: {
     rules: [
