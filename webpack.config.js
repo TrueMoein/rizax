@@ -3,16 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // installed via npm
 const htmlTemplate = require('html-webpack-template');
 
 module.exports = {
-  mode: 'production',
   entry: './src/app.js',
   output: {
     filename: 'rizax.js',
     path: path.resolve(__dirname, 'build')
   },
+  performance: {
+    hints: false
+  },
   devServer: {
     contentBase: './build',
-    historyApiFallback: true,
-    hot: true
+    historyApiFallback: true
   },
   module: {
     rules: [
