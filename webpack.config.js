@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // installed via npm
-const htmlTemplate = require('html-webpack-template');
 
 module.exports = {
   entry: './src/app.js',
@@ -40,10 +39,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      inject: false,
-      template: htmlTemplate,
-      appMountId: 'app',
-      title: 'RizAx - ریزعکس - فشرده سازی تصاویر، سریع و ایمن'
+      template: './src/index.html'
     })
   ]
 };
